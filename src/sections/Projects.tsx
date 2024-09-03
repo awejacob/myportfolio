@@ -50,7 +50,7 @@ export const ProjectsSection = () => {
         <section className="container">
           <SectionHeader eyebrow="Real-World Results" title="Featured Projects" description="See how I transformed concepts into engaging digital experiences"/>
            <div className="mt-10 lg:mt-24  flex flex-col gap-16 lg:gap-24 ">
-            {portfolioProjects.map((project)=>(
+            {portfolioProjects.map((project:any)=>(
              <article className="wrapper  bg-slate-800 overflow-hidden rounded-xl pt-8 px-8 lg:px-20 relative z-0 
              after:content-[''] after:absolute after:inset-0 after:z-10after:outline after:outline-2 after:-outline-offset-2 
               after:rounded-xl after:outline-white/15 lg:grid grid-cols-2 " 
@@ -64,7 +64,7 @@ export const ProjectsSection = () => {
                <h2 className="text-2xl md:text-3xl mt-2 md:mt-4 lg:text-4xl">{project.title}</h2>
                <hr className="border-t-white/15 mt-4"/>
                <ul className="mt-4 flex flex-col gap-4">
-                {project.results.map((result)=>(
+                {project.results.map((result:any)=>(
                  <li className="flex gap-2 text-sm md:text-base text-white/40" key={result.title}>
                   <CircleIcon className='size-5 md:size-6 lg:size-7'/>
                   <span>{result.title}</span>
