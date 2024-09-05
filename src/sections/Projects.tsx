@@ -5,6 +5,7 @@ import CircleIcon from "@/assets/icons/check-circle.svg"
 import ArrowUp from "@/assets/icons/arrow-up-right.svg"
 import Image from "next/image";
 import SectionHeader from "@/components/SectionHeader";
+import Card from "@/components/Card";
 
 const portfolioProjects = [
   {
@@ -51,9 +52,7 @@ export const ProjectsSection = () => {
           <SectionHeader eyebrow="Real-World Results" title="Featured Projects" description="See how I transformed concepts into engaging digital experiences"/>
            <div className="mt-10 lg:mt-24  flex flex-col gap-16 lg:gap-24 ">
             {portfolioProjects.map((project:any)=>(
-             <article className="wrapper  bg-slate-800 overflow-hidden rounded-xl pt-8 px-8 lg:px-20 relative z-0 
-             after:content-[''] after:absolute after:inset-0 after:z-10after:outline after:outline-2 after:-outline-offset-2 
-              after:rounded-xl after:outline-white/15 lg:grid grid-cols-2 " 
+             <Card className=" pt-8 px-8 lg:px-20 lg:grid grid-cols-2 pb-0" 
               key={project.results} >
               <section className="left-div lg:pb-16" >
                <div className="company-details md:text-lg inline-flex justify-center items-center gap-4 bg-gradient-to-r bg-emerald-300 to-sky-400 text-transparent bg-clip-text  uppercase">
@@ -81,7 +80,7 @@ export const ProjectsSection = () => {
               <div className="right-card relative">
                 <Image src={project.image} alt="project-image" className="mt-8 -mb-4 md:-mb-0 lg:mt-0  lg:absolute lg:max-w-none lg:w-auto lg:h-full"/>
               </div>
-             </article>
+             </Card>
             ))}
            </div>
         </section>
